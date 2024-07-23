@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DistanceConverter</title>
+    
+</head>
+<body>
+    <div id="distance"></div>
+
+  <script>
+      function metersToFeet(distMeters)
+    {     
+      var distFeet=distMeters/3.281;
+      var message = `${distMeters} is equal to ${distFeet}`;
+      var distDiv = document.getElementById("distance");
+      var newParagraph = document.createElement("p");
+      newParagraph.innerHTML = message;
+      distDiv.appendChild(newParagraph);
+    }
+    
+    function feetToMeters(distFeet)
+    {     
+      var distMeters=distFeet*3.281;
+      var message = `${distFeet} is equal to ${distMeters}`;
+      var distDiv = document.getElementById("distance");
+      var newParagraph = document.createElement("p");
+      newParagraph.innerHTML = message;
+      distDiv.appendChild(newParagraph);
+    }
+
+    metersToFeet(23);
+    feetToMeters(50);
+  </script>
+  </body>
+</html>

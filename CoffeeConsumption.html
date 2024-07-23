@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoffeeConsumption</title>
+    
+</head>
+<body>
+    <div id="coffee"></div>
+
+  <script>
+      function calculateCoffeeSupply(age,cupsPerDay)
+    {     
+      const maxAge = 80;
+      var yearsRemaining = maxAge - age;
+      var totalCups = Math.round(yearsRemaining * cupsPerDay * 365);
+      var message = `You will need ${totalCups} cups of coffee to keep you awake until the age of ${maxAge}.`;
+      var coffeeDiv = document.getElementById("coffee");
+      var newParagraph = document.createElement("p");
+      newParagraph.textContent = message;
+      coffeeDiv.appendChild(newParagraph);
+    }
+
+    calculateCoffeeSupply(23,5);
+    calculateCoffeeSupply(70,10);
+    calculateCoffeeSupply(50,3);
+  </script>
+  </body>
+</html>

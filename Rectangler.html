@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle</title>
+    
+</head>
+<body>
+    <div id="rectangle"></div>
+
+  <script>
+      function calcPerimeter(length,width)
+    {     
+        var perimeter=2*(length+width);
+        var result=`The Perimeter is ${perimeter}`;
+        var periDiv=document.getElementById('rectangle');
+        var para=document.createElement('p');
+        para.innerHTML=result;
+        periDiv.appendChild(para);
+
+    }
+    function calcArea(length,width)
+    {     
+        var area=length*width;
+        var result=`The Area is ${area}`;
+        var areaDiv=document.getElementById('rectangle');
+        var para=document.createElement('p');
+        para.innerHTML=result;
+        areaDiv.appendChild(para);
+
+    }
+
+    calcPerimeter(3,5);
+    calcArea(7,10);
+  </script>
+  </body>
+</html>

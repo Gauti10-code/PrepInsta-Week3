@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Age Calculator</title>
+    
+</head>
+<body>
+    <div id="petAge"></div>
+
+  <script>
+      function caculatePetAge(petAge)
+    {     
+        var petAgeInHumanYears=petAge*7;
+        var result=`Your kitty is ${petAgeInHumanYears} in cat years`;
+        var petAgeDiv=document.getElementById('petAge');
+        var para=document.createElement('p');
+        para.innerHTML=result;
+        petAgeDiv.appendChild(para);
+
+    }
+
+    caculatePetAge(3);
+    caculatePetAge(7);
+  </script>
+  </body>
+</html>
